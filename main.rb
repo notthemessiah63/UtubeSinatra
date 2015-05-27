@@ -24,6 +24,11 @@ get '/videos' do
   erb :index
 end
 
+get '/videos/:id' do
+  sql = "select * from videos where id = #{params[:id]}"
+  @videos = run_sql(sql).first
+  erb :show
+end
 
 
 
