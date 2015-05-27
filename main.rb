@@ -12,12 +12,10 @@ get '/videos/new' do
 end
 
 post '/videos' do
-  sql = "insert into videos (id, title, description, url, genre) values ('#{params[:id]}','#{params[:title]}','#{params[:description]}','#{params[:url]}','#{params[:genre]}')"
+  sql = "insert into videos (title, description, url, genre) values ('#{params[:title]}','#{params[:description]}','#{params[:url]}','#{params[:genre]}')"
   run_sql(sql)
-  binding.pry
   redirect to('/videos')
 end
-
 
 get '/videos' do
   # get the videos from the db, and assign to instance variable
