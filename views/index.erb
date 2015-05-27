@@ -1,7 +1,9 @@
-<h1>Welcome to the create item (index) page</h1>
-<p><a href="/videos/new">Create a video entry</p>
+<h1>Welcome to MemeTube</h1>
+<p>Feel free to select a video from the Video database</p>
 <ul>
 <% @videos.each do |video|%>
   <li><a href="/videos/<%= video['id'] %>"><%= video['title'] %><%= video['description'] %><%= video['url'] %><%= video['genre'] %></a></li>
   <% end %>
 </ul>
+
+<p><a href="/videos/new">Create a video entry</p>

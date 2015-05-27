@@ -30,6 +30,24 @@ get '/videos/:id' do
   erb :show
 end
 
+get '/videos/:id/edit' do
+  sql = "select * from videos where id = #{params[:id]}"
+  @videos = run_sql(sql).first
+  erb :edit
+end
+
+post '/videos/:id' do
+  sql = "update videos set title = '#{params[:title]}', description = '#{params[:description]}' where id = #{params[:id]}"
+  run_sql(sql)
+  redirect to("/videos/#{params[:id]}")
+end
+
+delete '/videos/:id/delete' do
+ sql = "delete from videos where id = '#{params[:id]}'"
+ run_sql(sql) 
+ redirect to("/videos") 
+end
+
 
 
 

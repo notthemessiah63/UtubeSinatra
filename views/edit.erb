@@ -1,0 +1,12 @@
+<h1>Please make your edits as required</h1>
+
+<form action="/videos/<%= @videos['id']%>" method="POST">
+  <input type="text" name="title" id="title" value="<%= @videos['title'] %>"autofocus>
+  <input type="text" name="description" id="description">
+  <input type="text" name="url" id="url">
+  <input type="text" name="genre" id="genre">
+  <button>Update Video</button>
+</form>
+<form action='/' method="get">
+  <button class="button">Return with no change</button>
+</form>
