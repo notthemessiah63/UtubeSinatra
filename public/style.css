@@ -1,0 +1,18 @@
+body {
+  font-family: arial;
+  color: white;
+  margin: 3%;
+  background-color: #6E94A3;
+}
+form {
+  font-size: 14px;
+  padding:1%
+}
+button {
+  height: 24px;
+  min-width: 40px;
+}
+p {
+  display: inline-block;
+  vertical-align: top;
+}

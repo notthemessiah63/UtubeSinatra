@@ -1,15 +1,17 @@
-<p>Welcome to the show video page</p>
 <p><%=@videos['title']%></p>
 <p><%=@videos['description']%></p>
 
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/<%=@videos['url']%>" frameborder="0" allowfullscreen></iframe>
-<form action='/' method="get">
-  <button class="button">Return to Videos</button>
+<form>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/<%=@videos['url']%>" frameborder="0" allowfullscreen></iframe>
 </form>
-<form action="/videos/<%= @videos['id'] %>/edit" method="get">
-  <button name="_method" value="edit">Edit This Video</button>
-</form>
-<form action="/videos/<%= @videos['id'] %>/delete" method="post">
-  <button name="_method" value="delete">Delete This Video</button>
-</form>
+<p>
+  <form action='/' method="get">
+    <button class="button">Return to Videos</button>
+  </form>
+  <form action="/videos/<%= @videos['id'] %>/edit" method="get">
+    <button name="_method" value="edit">Edit This Video</button>
+  </form>
+  <form action="/videos/<%= @videos['id'] %>/delete" method="post">
+    <button name="_method" value="delete">Delete This Video</button>
+  </form>
+</p>
