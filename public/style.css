@@ -4,13 +4,22 @@ body {
   margin: 3%;
   background-color: #6E94A3;
 }
+h1 {
+  padding:1%
+}
 form {
   font-size: 14px;
   padding:1%
 }
 button {
+  font-size: 18px;
+  height: 36px;
+  width: 200px;
+}
+input {
+  font-size: 16px;
   height: 24px;
-  min-width: 40px;
+  min-width: 52px;
 }
 p {
   display: inline-block;
